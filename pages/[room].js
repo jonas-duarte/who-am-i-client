@@ -31,7 +31,7 @@ export default function Room() {
 
   useEffect(() => {
     if (room && name) {
-      const ws = new WebSocket(process.env.WS_URL || "ws://localhost:8080");
+      const ws = new WebSocket(process.env.NEXT_PUBLIC_WS_URL || "ws://localhost:8080");
       setWsInstance(ws);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
